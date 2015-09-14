@@ -8,7 +8,7 @@ BEGIN {
     $ENV{LANG} = "en_US";
 }
 
-my $dbh = DBI->connect( "DBI:mysql:database=horizon;host=localhost", 
+my $dbh = DBI->connect( "DBI:Sybase:database=horizon;host=localhost", 
     'root', '', { RaiseError => 1, }
 ) or die "Connection failed";
 
