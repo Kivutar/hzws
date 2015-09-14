@@ -12,7 +12,7 @@ my $dbh = DBI->connect( "DBI:mysql:database=horizon;host=localhost",
     'root', '', { RaiseError => 1, }
 ) or die "Connection failed";
 
-my $sth = $dbh->prepare("SELECT * FROM borrowers WHERE borrower=?");
+my $sth = $dbh->prepare("SELECT * FROM borrower WHERE borrower#=?");
 
 get '/borrower/:id' => sub {
     content_type 'application/json';
